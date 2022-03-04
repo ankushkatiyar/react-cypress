@@ -7,4 +7,4 @@ jobs:
 
     steps:
       - name: step1
-        run: echo $GITHUB_WORKSPACE
+        run: printenv
