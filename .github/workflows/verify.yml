@@ -1,5 +1,8 @@
 name: verify yml data
-on: push
+on:
+  push:
+    branches:
+      - "main"
 
 jobs:
   verifyjob:
