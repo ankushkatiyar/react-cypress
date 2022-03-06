@@ -1,4 +1,4 @@
-name: verify yml
+name: verify yml data
 on: push
 
 jobs:
