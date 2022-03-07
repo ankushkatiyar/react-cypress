@@ -1,11 +1,14 @@
-on: push
-name: Jenkins single-shot master
+name: verify yml data
+on:
+  pull_request:
+    types:
+      - opened
+    branches:
+      - "main"
+
 jobs:
-  jenkinsfile-runner-prepackaged:
+  verifyjob:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@master
-      - name: jenkinsfile-runner-prepackaged
-        uses: jenkinsci/jenkinsfile-runner-github-actions/jenkinsfile-runner-prepackaged@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: npm run test
