@@ -14,3 +14,7 @@ test("two plus two is four", () => {
 test("two plus two", () => {
   expect(2 + 2).toBe(4);
 });
+
+test("two plus one", () => {
+  expect(2 + 2).toBe(4);
+});
