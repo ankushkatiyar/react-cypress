@@ -18,3 +18,7 @@ test("two plus two", () => {
 test("two plus one", () => {
   expect(2 + 2).toBe(4);
 });
+
+test("two plus three", () => {
+  expect(2 + 2).toBe(4);
+});
