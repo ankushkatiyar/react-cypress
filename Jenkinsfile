@@ -1,7 +1,7 @@
 pipeline {
     agent any
 
-    tools {nodejs "docker"}
+    tools {docker "docker"}
 
     stages {
         stage('Tests') {
