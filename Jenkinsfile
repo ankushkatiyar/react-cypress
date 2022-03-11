@@ -1,14 +1,21 @@
 pipeline {
     agent any
+
+    tools {nodejs "node"}
+
+    environment {
+        CHROME_BIN = '/bin/google-chrome'
+    }
+
     stages {
-        stage('Example Build') {
+        stage('Dependencies') {
             steps {
-                echo 'Hello World'
+                sh 'npm i'
             }
         }
-        stage('Example Deploy') {
-            steps{
-              echo "The build number is ${env.BUILD_NUMBER}"
+        stage('e2e Tests') {
+            steps {
+                sh 'npm run e2e'
             }
         }
     }
