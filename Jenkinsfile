@@ -7,7 +7,12 @@ pipeline {
     stages {	
         stage('Build') {	
             steps {	
-                sh 'which docker'
+                sh 'cat /etc/lsb-release'
+            }	
+        }	
+        stage('Deploy') {	
+            steps {	
+                sh 'cat /etc/lsb-release'
             }	
         }			
     }	
