@@ -1,19 +1,13 @@
 pipeline {	
-	agent {
-		docker {
-			image 'ubuntu:latest'
-		}
-	}
+	agent any
+    tools {nodejs "node"}
+
     stages {	
         stage('Build') {	
             steps {	
-                sh 'cat /etc/lsb-release'
+                sh 'npm i'
+                sh 'npm run e2e'
             }	
-        }	
-        stage('Deploy') {	
-            steps {	
-                sh 'cat /etc/lsb-release'
-            }	
-        }			
+        }		
     }	
 }
