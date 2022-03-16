@@ -24,3 +24,5 @@ yarn-error.log*
 
 /project.zip
 /lambdatest_run.json
+/cypress/videos/
+/cypress/screenshots/
